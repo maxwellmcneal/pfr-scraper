@@ -3,3 +3,8 @@ This repo contains the code for a web scraper I wrote for [pro-football-referenc
 
 # Data
 The web scraper outputs 2 files to the `/data/` directory, `player_list.csv` and `player_stats.csv`.
+
+# To-Do
+- [ ] Write data dictionary/documentation for scraper
+- [ ] Separate height and weight regex into 2 separate regex
+- [ ] Add kicking/punting stats
