@@ -26,14 +26,14 @@ There are 162 fields in 'player_stats.csv'. This is the main dataset output by t
 - career_begin: The year the player began their career.
 - career_end: The year the player ended their career.
 - active: A boolean indicating whether the player is currently active in the NFL or not.
-- height: The player's height in the format \<feet\>-\<inches\>, stored as a string. 
+- height: The player's height in the format "feet-inches", stored as a string. 
 - weight: The player's weight in pounds, stored as an int.
 
 For each of the following statistics, there are two columns, one with the suffix <code>_reg</code> and one with the suffix <code>_post</code> to indicate the player's career regular season numbers and career postseason numbers. See the games played statistics below as an example.
 
 ### Games Played Statistics
-- games: Number of regular season games played.
-- games_started: Number of regular season games started.
+- games_reg: Number of regular season games played.
+- games_started_reg: Number of regular season games started.
 - games_post: Number of postseason games played.
 - games_started_post: Number of postseason games started.
 
@@ -53,7 +53,7 @@ Going forward, for all other statistics, there will only be one entry in this da
 - pass_success: Passing success rate. A successful pass gains at least 40% of yards required on 1st down, 60% of yards required on 2nd down, and 100% on 3rd and 4th down. Denominator is pass attempts + times sacked.
 - pass_long: Longest completed pass thrown.
 - pass_yds_per_att: Yards gained per pass attempt.
-- pass_adj_yds_per_att: Adjusted yards gained per pass attempt. The formula is (Passing yards + 20*Passing TD - 45*Interceptions)/(Passes Attempted).
+- pass_adj_yds_per_att: Adjusted yards gained per pass attempt. The formula is (Passing yards + 20 \* Passing TD - 45 \* Interceptions)/(Passes Attempted).
 - pass_yds_per_cmp: Yards gained per pass completion.
 - pass_yds_per_g: Yards gained per game played.
 - pass_rating: NFL passer rating. See page [here](https://en.wikipedia.org/wiki/Passer_rating) for the formula.
@@ -61,10 +61,10 @@ Going forward, for all other statistics, there will only be one entry in this da
 - pass_sacked_yds: Yards lost due to sacks (first recorded in 1969, player per game since 1981).
 - pass_sacked_pct: Percentage of times sacked when attempting to pass. The formula is Times sacked / (Passes attempted + Times sacked).
 - pass_net_yds_per_att: Net yards gained per pass attempt. The formula is (Passing Yards - Sack Yards) / (Passes Attempted + Times Sacked).
-- pass_adj_net_yds_per_att: Adjusted net yards per pass attempt. The formula is (Passing Yards - Sack Yards + (20 * Passing TD) - (45 * Interceptions)) / (Passes Attempted + Times Sacked).
+- pass_adj_net_yds_per_att: Adjusted net yards per pass attempt. The formula is (Passing Yards - Sack Yards + (20 \* Passing TD) - (45 \* Interceptions)) / (Passes Attempted + Times Sacked).
 - comebacks: Comebacks led by quarterback.
 - gwd: Game-winning drives led by quarterback.
-24
+
 ### Rushing & Receiving Statistics
 - rush_att: Rushing attempts (sacks not included in NFL).
 - rush_yds: Rushing yards gained (sack yardage is not included by NFL).
@@ -90,7 +90,7 @@ Going forward, for all other statistics, there will only be one entry in this da
 - touches: Rushing attempts and receptions.
 - yds_per_touch: Scrimmage yards per touch, rushing + receiving yardage per opportunity.
 - rush_receive_td: Rushing and receiving touchdowns.
-48
+
 ### Defense & Fumble Statistics
 - def_int: Passes intercepted on defense.
 - def_int_yds: Yards interceptions were returned.
